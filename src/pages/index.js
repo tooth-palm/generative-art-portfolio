@@ -5,13 +5,15 @@ import { graphql } from "gatsby";
 import ThumbnailCard from "../components/thumbnail-card";
 
 const IndexPage = ({ data }) => {
-  const image = getImage(
-    data.allMarkdownRemark.edges[0].node.frontmatter.thumbnail
+  const thumbnailImages = data.allMarkdownRemark.edges.map((post) =>
+    getImage(post.node.frontmatter.thumbnail)
+  );
+  const postText = data.allMarkdownRemark.edges.map(
+    (post) => post.node.frontmatter.title
   );
   return (
     <>
       <Header />
-      {/* <GatsbyImage image={image} alt="aaa" /> */}
       <div
         style={{
           position: "absolute",
@@ -25,8 +27,13 @@ const IndexPage = ({ data }) => {
           zIndex: "-1",
         }}
       >
-        <ThumbnailCard image={image} title={"aaa"} />
-        <ThumbnailCard image={image} title={"bbb"} />
+        {thumbnailImages.map((image, index) => (
+          <ThumbnailCard
+            image={image}
+            title={postText[index]}
+            key={postText[index]}
+          />
+        ))}
       </div>
     </>
   );
