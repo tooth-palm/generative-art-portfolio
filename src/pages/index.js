@@ -1,46 +1,49 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Header from "../components/header";
 import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
-  // const posts = query.allMarkdownRemark.edges.node;
-  // const thumbnail_image = posts[0].frontmatter.thumbnail.childImageSharp.fluid;
-  // return (
+  const image = getImage(
+    data.allMarkdownRemark.edges[0].node.frontmatter.thumbnail
+  );
+  return (
     <>
       <Header />
-      {/* <StaticImage fluid={thumbnail_image} /> */}
+      <GatsbyImage image={image} alt="aaa" />
     </>
   );
 };
 
 export default IndexPage;
 
-// export const query = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           excerpt
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//             description
-//             thumbnail {
-//               childImageSharp {
-//                 fluid(maxWidth: 1280) {
-//                   ...GatsbyImageSharpFluid
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 400
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
