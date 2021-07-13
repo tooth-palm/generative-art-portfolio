@@ -2,6 +2,7 @@ import * as React from "react";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Header from "../components/header";
 import { graphql } from "gatsby";
+import ThumbnailCard from "../components/thumbnail-card";
 
 const IndexPage = ({ data }) => {
   const image = getImage(
@@ -10,7 +11,23 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Header />
-      <GatsbyImage image={image} alt="aaa" />
+      {/* <GatsbyImage image={image} alt="aaa" /> */}
+      <div
+        style={{
+          position: "absolute",
+          width: "100%",
+          left: "0",
+          top: "10vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          zIndex: "-1",
+        }}
+      >
+        <ThumbnailCard image={image} title={"aaa"} />
+        <ThumbnailCard image={image} title={"bbb"} />
+      </div>
     </>
   );
 };
@@ -36,7 +53,7 @@ export const pageQuery = graphql`
               childImageSharp {
                 gatsbyImageData(
                   width: 400
-                  placeholder: BLURRED
+                  placeholder: DOMINANT_COLOR
                   formats: [AUTO, WEBP, AVIF]
                 )
               }
