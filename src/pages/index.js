@@ -3,6 +3,7 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Header from "../components/header";
 import { graphql } from "gatsby";
 import ThumbnailCard from "../components/thumbnail-card";
+import BackgroundImage from "../components/background";
 
 const IndexPage = ({ data }) => {
   const thumbnailImages = data.allMarkdownRemark.edges.map((post) =>
@@ -14,6 +15,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Header />
+      <BackgroundImage />
       <div
         style={{
           position: "absolute",
