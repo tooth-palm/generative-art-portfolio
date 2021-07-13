@@ -11,8 +11,9 @@ const ThumbnailCard = ({ image, title }) => {
           height: "480px",
           background: "#333333",
           display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "center",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          flexDirection: "column",
           margin: "20px",
           borderRadius: "8px",
           boxShadow: "0px 0px 4px rgba(0, 0, 0, .5)",
@@ -23,6 +24,7 @@ const ThumbnailCard = ({ image, title }) => {
           alt={title}
           style={{ marginTop: "20px", borderRadius: "8px" }}
         />
+        <p style={{ color: "#8D8D8D" }}>{title}</p>
       </div>
     </>
   );
