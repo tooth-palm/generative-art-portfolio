@@ -1,14 +1,14 @@
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as React from "react";
 
-const ThumbnailCard = ({ image, title }) => {
+const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
   return (
     <>
       <div
         style={{
           position: "relative",
           width: "440px",
-          height: "480px",
+          height: "520px",
           background: "#333333",
           display: "flex",
           alignItems: "center",
@@ -25,6 +25,25 @@ const ThumbnailCard = ({ image, title }) => {
           style={{ marginTop: "20px", borderRadius: "8px" }}
         />
         <p style={{ color: "#CDCDCD" }}>{title}</p>
+        <div>
+          <a
+            href={`https://github.com/HayashiInShiga/generative-art-portfolio/tree/main/post/${codeSrc}`}
+            style={{
+              color: "#CDCDCD",
+            }}
+          >
+            View code
+          </a>
+          <a
+            href={`https://www.instagram.com/p/${imageSrc}`}
+            style={{
+              color: "#CDCDCD",
+              marginLeft: "20px",
+            }}
+          >
+            More images
+          </a>
+        </div>
       </div>
     </>
   );

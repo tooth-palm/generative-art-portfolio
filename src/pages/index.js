@@ -12,6 +12,13 @@ const IndexPage = ({ data }) => {
   const postText = data.allMarkdownRemark.edges.map(
     (post) => post.node.frontmatter.title
   );
+  const githubSource = data.allMarkdownRemark.edges.map(
+    (post) => post.node.frontmatter.github
+  );
+  console.log(githubSource);
+  const instagramSource = data.allMarkdownRemark.edges.map(
+    (post) => post.node.frontmatter.instagram
+  );
   return (
     <>
       <Header />
@@ -33,6 +40,8 @@ const IndexPage = ({ data }) => {
           <ThumbnailCard
             image={image}
             title={postText[index]}
+            codeSrc={githubSource[index]}
+            imageSrc={instagramSource[index]}
             key={postText[index]}
           />
         ))}
@@ -67,6 +76,8 @@ export const pageQuery = graphql`
                 )
               }
             }
+            github
+            instagram
           }
         }
       }
