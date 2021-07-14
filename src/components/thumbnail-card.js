@@ -24,7 +24,7 @@ const ThumbnailCard = ({ image, title }) => {
           alt={title}
           style={{ marginTop: "20px", borderRadius: "8px" }}
         />
-        <p style={{ color: "#8D8D8D" }}>{title}</p>
+        <p style={{ color: "#CDCDCD" }}>{title}</p>
       </div>
     </>
   );
