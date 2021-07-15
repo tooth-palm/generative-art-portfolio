@@ -8,19 +8,7 @@ const ProfilePage = () => {
     <>
       <Header />
       <BackgroundImage />
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          left: "0",
-          top: "12vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          zIndex: "-1",
-        }}
-      >
+      <div style={bodyWrapper}>
         <ProfileCard />
       </div>
     </>
@@ -28,3 +16,15 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
+const bodyWrapper = {
+  position: "absolute",
+  width: "100%",
+  left: "0",
+  top: "12vh",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexWrap: "wrap",
+  zIndex: "-1",
+};

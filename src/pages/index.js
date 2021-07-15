@@ -23,18 +23,7 @@ const IndexPage = ({ data }) => {
     <>
       <Header />
       <BackgroundImage />
-      <div
-        style={{
-          position: "absolute",
-          width: "100%",
-          left: "0",
-          top: "12vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexWrap: "wrap",
-        }}
-      >
+      <div style={bodyWrapper}>
         {thumbnailImages.map((image, index) => (
           <ThumbnailCard
             image={image}
@@ -83,3 +72,14 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+const bodyWrapper = {
+  position: "absolute",
+  width: "100%",
+  left: "0",
+  top: "12vh",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexWrap: "wrap",
+};
