@@ -70,7 +70,7 @@ export const pageQuery = graphql`
             thumbnail {
               childImageSharp {
                 gatsbyImageData(
-                  width: 400
+                  width: 440
                   placeholder: DOMINANT_COLOR
                   formats: [AUTO, WEBP, AVIF]
                 )

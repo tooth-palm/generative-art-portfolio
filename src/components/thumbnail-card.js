@@ -8,13 +8,14 @@ const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
         style={{
           position: "relative",
           width: "440px",
-          height: "520px",
+          height: "auto",
           background: "#333333",
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
           flexDirection: "column",
           margin: "20px",
+          paddingBottom: "20px",
           borderRadius: "8px",
           boxShadow: "0px 0px 4px rgba(0, 0, 0, .5)",
         }}
@@ -22,7 +23,9 @@ const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
         <GatsbyImage
           image={image}
           alt={title}
-          style={{ marginTop: "20px", borderRadius: "8px" }}
+          lyaout={"constrained"}
+          width={440}
+          style={{ borderRadius: "8px 8px 0 0" }}
         />
         <p style={{ color: "#CDCDCD" }}>{title}</p>
         <div>
