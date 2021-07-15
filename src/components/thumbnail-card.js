@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as React from "react";
 
@@ -27,7 +28,9 @@ const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
           width={440}
           style={{ zIndex: "0", borderRadius: "8px 8px 0 0" }}
         />
-        <p style={{ color: "#CDCDCD" }}>{title}</p>
+        <p style={{ color: "#CDCDCD" }}>
+          <Typography variant="h6">{title}</Typography>
+        </p>
         <div>
           <a
             href={`https://github.com/HayashiInShiga/generative-art-portfolio/tree/main/post/${codeSrc}`}
@@ -35,7 +38,7 @@ const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
               color: "#CDCDCD",
             }}
           >
-            View code
+            <Typography variant="button">View code</Typography>
           </a>
           <a
             href={`https://www.instagram.com/p/${imageSrc}`}
@@ -44,7 +47,7 @@ const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
               marginLeft: "20px",
             }}
           >
-            More images
+            <Typography variant="button">More images</Typography>
           </a>
         </div>
       </div>

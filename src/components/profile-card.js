@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 
@@ -7,8 +8,8 @@ const ProfileCard = () => {
       <div
         style={{
           position: "relative",
-          width: "440px",
-          height: "480px",
+          width: "400px",
+          height: "auto",
           background: "#333333",
           display: "flex",
           alignItems: "center",
@@ -23,14 +24,19 @@ const ProfileCard = () => {
           src="../images/profile-image.png"
           alt="Profile Image"
           // width={300}
-          style={{ marginTop: "20px", borderRadius: "8px", width: "80%" }}
+          style={{
+            marginTop: "20px",
+            borderRadius: "8px",
+            width: "80%",
+            zIndex: "0",
+          }}
         />
         <p style={{ color: "#CDCDCD", textAlign: "center" }}>
-          <b>Hayashizaki</b>
-          <br />
-          first year graduate student
-          <br />
-          at Kyoto Institue of Technology
+          <Typography variant="h5">Hayashizaki</Typography>
+          <Typography variant="body2">first year graduate student</Typography>
+          <Typography variant="body2">
+            at Kyoto Institue of Technology
+          </Typography>
         </p>
         <a
           href="https://github.com/HayashiInShiga/generative-art-portfolio"
@@ -38,10 +44,10 @@ const ProfileCard = () => {
             color: "#CDCDCD",
             marginRight: "20px",
             marginLeft: "auto",
-            marginBottom: "10px",
+            marginBottom: "15px",
           }}
         >
-          View code on GitHub
+          <Typography variant="button">View code on GitHub</Typography>
         </a>
       </div>
     </>

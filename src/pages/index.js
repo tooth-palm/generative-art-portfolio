@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
           position: "absolute",
           width: "100%",
           left: "0",
-          top: "10vh",
+          top: "12vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

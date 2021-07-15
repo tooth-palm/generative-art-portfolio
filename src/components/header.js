@@ -29,12 +29,24 @@ const Header = ({ currentPage }) => {
         />
         <Link
           to="/"
-          style={{ color: "#ffffff", marginRight: "48px", marginLeft: "auto" }}
+          style={{
+            color: "#ffffff",
+            marginRight: "48px",
+            marginLeft: "auto",
+            textDecoration: "none",
+          }}
         >
-          <Typography variant="h6">Home</Typography>
+          <Typography variant="button">Home</Typography>
         </Link>
-        <Link to="/profile" style={{ color: "#ffffff", marginRight: "48px" }}>
-          <Typography variant="h6">Profile</Typography>
+        <Link
+          to="/profile"
+          style={{
+            color: "#ffffff",
+            marginRight: "48px",
+            textDecoration: "none",
+          }}
+        >
+          <Typography variant="button">Profile</Typography>
         </Link>
       </div>
       {/* <div style={{ width: "100%", height: "10%", left: "0", top: "0" }}></div> */}
