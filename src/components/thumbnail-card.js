@@ -18,6 +18,7 @@ const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
           paddingBottom: "20px",
           borderRadius: "8px",
           boxShadow: "0px 0px 4px rgba(0, 0, 0, .5)",
+          zIndex: "0",
         }}
       >
         <GatsbyImage
