@@ -22,8 +22,8 @@ const ProfileCard = () => {
         <StaticImage
           src="../images/profile-image.png"
           alt="Profile Image"
-          width={300}
-          style={{ marginTop: "20px", borderRadius: "8px" }}
+          // width={300}
+          style={{ marginTop: "20px", borderRadius: "8px", width: "80%" }}
         />
         <p style={{ color: "#CDCDCD", textAlign: "center" }}>
           <b>Hayashizaki</b>
