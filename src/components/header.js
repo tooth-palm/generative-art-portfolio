@@ -1,6 +1,8 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import "@fontsource/roboto";
+import Typography from "@material-ui/core/Typography";
 
 const Header = ({ currentPage }) => {
   return (
@@ -29,10 +31,10 @@ const Header = ({ currentPage }) => {
           to="/"
           style={{ color: "#ffffff", marginRight: "48px", marginLeft: "auto" }}
         >
-          Home
+          <Typography variant="h6">Home</Typography>
         </Link>
         <Link to="/profile" style={{ color: "#ffffff", marginRight: "48px" }}>
-          Profile
+          <Typography variant="h6">Profile</Typography>
         </Link>
       </div>
       {/* <div style={{ width: "100%", height: "10%", left: "0", top: "0" }}></div> */}
