@@ -33,7 +33,6 @@ const IndexPage = ({ data }) => {
           alignItems: "center",
           justifyContent: "center",
           flexWrap: "wrap",
-          zIndex: "-1",
         }}
       >
         {thumbnailImages.map((image, index) => (

@@ -16,6 +16,7 @@ const Header = ({ currentPage }) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
+          zIndex: "1",
         }}
       >
         <StaticImage
