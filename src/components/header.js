@@ -12,7 +12,7 @@ const Header = ({ currentPage }) => {
           height: "80px",
           left: "0",
           top: "0",
-          background: "#272727",
+          background: "#000000",
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",

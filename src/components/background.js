@@ -10,7 +10,7 @@ const BackgroundImage = () => {
         height: "100vh",
         left: "0",
         top: "0",
-        background: "#000000",
+        background: "#CCCCCC",
         zIndex: "-2",
       }}
     ></div>
