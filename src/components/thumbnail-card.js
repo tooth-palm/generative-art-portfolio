@@ -18,7 +18,6 @@ const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
           paddingBottom: "20px",
           borderRadius: "8px",
           boxShadow: "0px 0px 4px rgba(0, 0, 0, .5)",
-          zIndex: "0",
         }}
       >
         <GatsbyImage
@@ -26,7 +25,7 @@ const ThumbnailCard = ({ image, title, codeSrc, imageSrc }) => {
           alt={title}
           lyaout={"constrained"}
           width={440}
-          style={{ borderRadius: "8px 8px 0 0" }}
+          style={{ zIndex: "0", borderRadius: "8px 8px 0 0" }}
         />
         <p style={{ color: "#CDCDCD" }}>{title}</p>
         <div>
