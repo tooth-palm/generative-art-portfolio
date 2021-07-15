@@ -1,5 +1,5 @@
 import { Typography } from "@material-ui/core";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 
 const ProfileCard = () => {
@@ -23,7 +23,6 @@ const ProfileCard = () => {
         <StaticImage
           src="../images/profile-image.png"
           alt="Profile Image"
-          // width={300}
           style={{
             marginTop: "20px",
             borderRadius: "8px",

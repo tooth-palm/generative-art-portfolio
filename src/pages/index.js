@@ -1,5 +1,5 @@
 import * as React from "react";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 import Header from "../components/header";
 import { graphql } from "gatsby";
 import ThumbnailCard from "../components/thumbnail-card";

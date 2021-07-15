@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import "@fontsource/roboto";
 import Typography from "@material-ui/core/Typography";
 
-const Header = ({ currentPage }) => {
+const Header = () => {
   return (
     <>
       <div
@@ -49,7 +49,6 @@ const Header = ({ currentPage }) => {
           <Typography variant="button">Profile</Typography>
         </Link>
       </div>
-      {/* <div style={{ width: "100%", height: "10%", left: "0", top: "0" }}></div> */}
     </>
   );
 };
