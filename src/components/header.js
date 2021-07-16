@@ -2,17 +2,10 @@ import { Link } from "gatsby";
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import "@fontsource/roboto";
-import { Drawer, Hidden, IconButton, Typography } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import { Hidden, Typography } from "@material-ui/core";
+import HamburgerMenu from "./hamburgermenu";
 
 const Header = () => {
-  const [isDrawerOpen, setDrawerOpen] = React.useState(false);
-  const openDrawer = () => {
-    setDrawerOpen(true);
-  };
-  const closeDrawer = () => {
-    setDrawerOpen(false);
-  };
   return (
     <>
       <div style={headerWrapper}>
@@ -23,23 +16,7 @@ const Header = () => {
           style={{ marginLeft: "32px" }}
         />
         <Hidden smUp>
-          <IconButton
-            color="inherit"
-            onClick={openDrawer}
-            style={homeButtonStyle}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Drawer anchor="right" open={isDrawerOpen} onClose={closeDrawer}>
-            <div style={drawerBackground}>
-              <Link to="/" style={drawerButtonStyle}>
-                <Typography variant="h5">Home</Typography>
-              </Link>
-              <Link to="/profile" style={drawerButtonStyle}>
-                <Typography variant="h5">Profile</Typography>
-              </Link>
-            </div>
-          </Drawer>
+          <HamburgerMenu />
         </Hidden>
         <Hidden xsDown>
           <Link to="/" style={homeButtonStyle}>
@@ -71,26 +48,13 @@ const headerWrapper = {
 
 const homeButtonStyle = {
   color: "#ffffff",
-  marginRight: "5%",
+  marginRight: "48px",
   marginLeft: "auto",
   textDecoration: "none",
 };
 
 const profileButtonStyle = {
   color: "#ffffff",
-  marginRight: "5%",
+  marginRight: "48px",
   textDecoration: "none",
-};
-
-const drawerBackground = {
-  height: "100vh",
-  width: "40vw",
-  background: "#CDCDCD",
-  textAlign: "center",
-};
-
-const drawerButtonStyle = {
-  margin: "20px",
-  textDecoration: "none",
-  color: "#272727",
 };
