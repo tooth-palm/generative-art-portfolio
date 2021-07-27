@@ -26,5 +26,4 @@ const bodyWrapper = {
   alignItems: "center",
   justifyContent: "center",
   flexWrap: "wrap",
-  zIndex: "-1",
 };
